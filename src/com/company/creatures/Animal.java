@@ -4,6 +4,7 @@ import com.company.devices.Saleable;
 
 import java.io.File;
 
+
 public abstract class Animal implements Saleable, Feedable {
 
     final static Double MIN_WEIGHT = 2.0;

@@ -2,7 +2,11 @@ package com.company.creatures;
 
 import com.company.devices.Car;
 import com.company.devices.Phone;
+import com.sun.jdi.connect.Connector;
 
+import java.sql.Connection;
+import java.sql.SQLClientInfoException;
+import java.sql.SQLException;
 import java.time.LocalDateTime;
 
 public class Human extends Animal {
