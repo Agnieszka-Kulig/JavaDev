@@ -5,6 +5,11 @@ import com.company.devices.Car;
 import com.sun.jdi.IntegerValue;
 import com.sun.jdi.connect.Connector;
 
+import java.io.BufferedReader;
+import java.io.OutputStream;
+import java.io.PrintWriter;
+import java.sql.SQLClientInfoException;
+import java.sql.SQLException;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -12,7 +17,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-
+       String query =  "select * from teacher";
         List<String> list = new ArrayList<>();
         list.add("Warszawa");
         list.add("Palermo");
@@ -67,10 +72,25 @@ public class Main {
 //            System.out.println(entry.getKey());
 
 
-
         for (Car car : cars.values()) {
             System.out.println(car);
         }
+
+
+// wyznacz najmniejsze i największe państwo
+
+        Map<String, Integer> map = new TreeMap<String, Integer>();
+        map.put("Polska", 320678);
+        map.put("Grecja", 131990);
+        map.put("Niemcy", 350385);
+        map.put("Hiszpania", 505998);
+        map.put("Francja", 643802);
+
+
+        Integer min = Collections.min(map.values());
+        Integer max = Collections.max(map.values());
+        System.out.println(min + " Najmniejsze państwo");
+        System.out.println(max + " Największe państwo");
     }
 }
 
@@ -78,26 +98,5 @@ public class Main {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-//        TreeMap<String, Integer> mapa = new TreeMap<>();
-//        mapa.put("Polska", 3000);
-//        mapa.put("Australia", 7692000);
-//        mapa.put("Russia", 17100000);
-//        mapa.put("China", 9597000);
-//        mapa.put("USA", 9834000);
-//
-//
-//    }
-//    }
 
 

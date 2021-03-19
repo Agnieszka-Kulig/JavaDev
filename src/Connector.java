@@ -10,14 +10,14 @@ public class Connector {
         props.setProperty("user", Configuration.USER);
         props.setProperty("password", Configuration.PASS);
         CONNECTION = DriverManager.getConnection(Configuration.DB_URL, props);
-//        String sql = "Select * from animal";
         System.out.println("connected");
     }
     public static Statement getStatement() throws SQLException{
         return CONNECTION.createStatement();
     }
-    public static void executSQL(String sql) throws SQLException{
+    public static void executeSQL(String sql) throws SQLException{
 
         CONNECTION.createStatement().execute(sql);
+
     }
 }
